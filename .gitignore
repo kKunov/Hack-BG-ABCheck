@@ -1,28 +1,10 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+bool ABCheck(char *str)
+{
+    for(int i=0; i<strlen(str)-1;i++, str++)
+    {
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+        if(*str=='a' && *(str+4)=='b')
+            return true;
+    }
+    return false;
+}
